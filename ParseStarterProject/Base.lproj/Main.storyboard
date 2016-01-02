@@ -170,14 +170,41 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LPm-UW-zzQ">
+                                <rect key="frame" x="142" y="117" width="316" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="We7-Rr-Z2w"/>
+                                    <constraint firstAttribute="width" constant="316" id="n2p-ky-TVZ"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo9-NB-3Jx">
+                                <rect key="frame" x="244" y="421" width="99" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="QYz-LE-kBb"/>
+                                    <constraint firstAttribute="width" constant="99" id="tL6-oa-gOf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="CALL UBER"/>
+                                <connections>
+                                    <action selector="callUber:" destination="P1F-gg-srk" eventType="touchUpInside" id="5Xq-Yb-66Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ifb-Cb-c4B" firstAttribute="leading" secondItem="X55-kV-EA3" secondAttribute="leadingMargin" constant="-20" id="96y-mT-UC8"/>
+                            <constraint firstItem="jo9-NB-3Jx" firstAttribute="centerX" secondItem="X55-kV-EA3" secondAttribute="centerX" id="CVZ-s7-xDr"/>
+                            <constraint firstItem="LPm-UW-zzQ" firstAttribute="top" secondItem="Ifb-Cb-c4B" secondAttribute="bottom" constant="53" id="Gps-33-tXL"/>
                             <constraint firstItem="Ifb-Cb-c4B" firstAttribute="top" secondItem="Dgs-KY-9bG" secondAttribute="bottom" id="TEP-dk-Ief"/>
+                            <constraint firstItem="jo9-NB-3Jx" firstAttribute="top" secondItem="LPm-UW-zzQ" secondAttribute="bottom" constant="50" id="gS6-bF-3oz"/>
+                            <constraint firstItem="LPm-UW-zzQ" firstAttribute="centerX" secondItem="X55-kV-EA3" secondAttribute="centerX" id="l0b-c2-u5D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ifb-Cb-c4B" secondAttribute="trailing" constant="-20" id="sKN-PG-LNy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="callUberButton" destination="jo9-NB-3Jx" id="7cS-vJ-uL3"/>
+                        <outlet property="map" destination="LPm-UW-zzQ" id="Y2U-do-wMp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE6-7q-QDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
