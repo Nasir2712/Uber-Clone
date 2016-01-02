@@ -45,6 +45,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                  else {
                     
+                    self.performSegueWithIdentifier("loginRider", sender: self)
+                    
                 }
             }
         } else {
@@ -53,7 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 (user: PFUser?, error: NSError?) -> Void in
                 if user != nil {
                     
-                    print("Login Successful")
+                    self.performSegueWithIdentifier("loginRider", sender: self)
                     
                 } else {
                     
@@ -127,6 +129,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        if PFUser.currentUser()?.username != nil {
+            
+            self.performSegueWithIdentifier("loginRider", sender: self)
+        }
+        
+        
+    }
+    
+    
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {

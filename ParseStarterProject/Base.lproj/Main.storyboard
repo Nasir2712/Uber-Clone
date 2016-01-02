@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P1F-gg-srk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="68" id="XM6-Z6-MWY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-cR-BTW">
@@ -59,7 +60,7 @@
                                     <constraint firstAttribute="height" constant="21" id="w1W-P2-EGj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzz-Ee-viQ">
@@ -69,7 +70,7 @@
                                     <constraint firstAttribute="width" constant="55" id="HYT-GQ-bFO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsB-e7-Tpq">
@@ -79,7 +80,7 @@
                                     <constraint firstAttribute="width" constant="55" id="Vzz-3U-6oM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-ly-yd1">
@@ -135,11 +136,52 @@
                         <outlet property="signUpButton" destination="Ap1-ly-yd1" id="JRH-wv-FLD"/>
                         <outlet property="switch" destination="xAs-iq-EJN" id="aEr-Jv-Z23"/>
                         <outlet property="username" destination="vaj-cR-BTW" id="JBe-Zt-EXM"/>
+                        <segue destination="P1F-gg-srk" kind="show" identifier="loginRider" id="aZz-JZ-571"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="228"/>
+            <point key="canvasLocation" x="165" y="222"/>
+        </scene>
+        <!--Rider View Controller-->
+        <scene sceneID="r07-Ut-Gjh">
+            <objects>
+                <viewController title="Rider View Controller" id="P1F-gg-srk" customClass="RiderViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dgs-KY-9bG"/>
+                        <viewControllerLayoutGuide type="bottom" id="NbX-9x-Mxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X55-kV-EA3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifb-Cb-c4B">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RTP-6m-AtZ"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="UBER" id="nFH-Ox-wGa">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="oXu-Sf-a5H">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logout Rider" id="EZL-N6-Bxc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ifb-Cb-c4B" firstAttribute="leading" secondItem="X55-kV-EA3" secondAttribute="leadingMargin" constant="-20" id="96y-mT-UC8"/>
+                            <constraint firstItem="Ifb-Cb-c4B" firstAttribute="top" secondItem="Dgs-KY-9bG" secondAttribute="bottom" id="TEP-dk-Ief"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ifb-Cb-c4B" secondAttribute="trailing" constant="-20" id="sKN-PG-LNy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HE6-7q-QDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="12"/>
         </scene>
     </scenes>
 </document>
